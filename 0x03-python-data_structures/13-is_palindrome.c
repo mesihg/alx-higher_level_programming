@@ -6,7 +6,7 @@
  *
  * Return: Reversed linked list
  */
-listint_t reverse_listint(listint_t **head)
+void reverse_listint(listint_t **head)
 {
 	listint_t *current = *head, *prev = NULL, *next = NULL;
 
@@ -19,8 +19,6 @@ listint_t reverse_listint(listint_t **head)
 	}
 
 	*head = prev;
-
-	return (*head);
 }
 
 /**
@@ -31,24 +29,42 @@ listint_t reverse_listint(listint_t **head)
  */
 int is_palindrome(listint_t **head)
 {
-	if (*head == NULL || *head->next == NULL)
+	listint_t *slow = *head, *fast = *head, *temp = *head, *dup = NULL;
+
+	if (*head == NULL || (*head)->next == NULL)
 		return (1);
-	listint_t *slow = *head;
-	listint_t *fast = *head;
-	listint_t temp = *head;
-	while (fast->next != NULL && fast->next->next != NULL)
+
+	while (1)
 	{
-		slow = slow->next;
 		fast = fast->next->next;
-	}
-	slow->next = reverse(slow->next);
-	slow = slow->next;
-	while (slow != NULL)
-	{
-		if (temp->data != slow->data)
-			return (0);
-		temp = temp->next;
+		if (!fast)
+		{
+			dup = slow->next;
+			break;
+		}
+		if (!fast->next)
+		{
+			dup = slow->next->next;
+			break;
+		}
 		slow = slow->next;
 	}
-	return (1);
+
+	reverse_listint(&dup);
+
+	while (dup && temp)
+	{
+		if (temp->n == dup->n)
+		{
+			dup = dup->next;
+			temp = temp->next;
+		}
+		else
+			return (0);
+	}
+
+	if (!dup)
+		return (1);
+
+	return (0);
 }
