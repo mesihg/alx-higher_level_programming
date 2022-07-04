@@ -36,16 +36,13 @@ int is_palindrome(listint_t **head)
 	listint_t *slow = *head;
 	listint_t *fast = *head;
 	listint_t temp = *head;
-	
 	while (fast->next != NULL && fast->next->next != NULL)
 	{
 		slow = slow->next;
 		fast = fast->next->next;
 	}
-
 	slow->next = reverse(slow->next);
 	slow = slow->next;
-
 	while (slow != NULL)
 	{
 		if (temp->data != slow->data)
