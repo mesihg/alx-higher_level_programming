@@ -35,11 +35,11 @@ class Square:
         return self.__position
 
     @position.setter
-    def position(self, position):
+    def position(self, value):
         """set the position with the new position value"""
-        if not isinstance(position, tuple):
+        if not isinstance(value, tuple) and len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = position
+        self.__position = value
 
     def my_print(self):
         """prints the square with the character #"""
