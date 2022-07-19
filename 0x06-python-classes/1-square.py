@@ -5,6 +5,6 @@
 
 class Square:
     """Empty class to represent a square"""
-    def __init__(self):
+    def __init__(self, size):
         """Initialize instance data"""
-        self.__size = 0
+        self.__size = size
