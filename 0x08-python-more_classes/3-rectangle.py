@@ -53,8 +53,8 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ''
         rect_charcter = []
-        for i in range(4):
-            for j in range(2):
+        for i in range(self.__height):
+            for j in range(self.__width):
                 rect_charcter.append('#')
             rect_charcter.append('\n')
         return "".join(rect_charcter)
