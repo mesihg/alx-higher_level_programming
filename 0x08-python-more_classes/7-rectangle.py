@@ -6,7 +6,7 @@ class Rectangle:
     """Represents a rectangle"""
 
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initialize the rectangle instance data"""
@@ -59,8 +59,8 @@ class Rectangle:
             return ''
         rect_charcter = []
         for i in range(self.__height):
-            for j in range(self.__width):
-                rect_charcter.append(Rectangle.print_symbol)
+            [rect_charcter.append(str(self.print_symbol))
+             for j in range(self.__width)]
             if i != self.__height - 1:
                 rect_charcter.append('\n')
         return "".join(rect_charcter)
