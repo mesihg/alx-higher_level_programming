@@ -5,7 +5,7 @@ Using ``say_my_name``
 =====================
 
 
-``say_my_name(first_name, last_name="")`` prints full-name..
+``say_my_name(first_name, last_name="")`` prints full-name.
   First import ``say_my_name`` from the ``3-say_my_name`` module:
 
 Import the function from the module:
