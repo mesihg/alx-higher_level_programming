@@ -5,7 +5,7 @@ Using ``matrix_divided``
 =====================
 
 
-``matrix_divided(a, b=98)`` A new matrix with each elements of the matrix divided by div.
+``matrix_divided(matrix, div)`` A new matrix with each elements of the matrix divided by div.
   First import ``matrix_divided`` from the ``2-matrix_divided`` module:
 
 Import the function from the module:
