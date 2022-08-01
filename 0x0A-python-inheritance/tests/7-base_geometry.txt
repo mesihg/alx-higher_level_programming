@@ -21,6 +21,13 @@ Testing docstring for the class:
 
 Testing with positive number:
     >>> bg = BaseGeometry()
+    >>> bg.area()
+    Traceback (most recent call last):
+     Exception: area() is not implemented
+
+
+Testing with positive number:
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("test", 30)
     
 
@@ -36,6 +43,13 @@ Testing with float number:
     Traceback (most recent call last):
     TypeError: test must be an integer
     
+
+Testing with non-integer number:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("test", "4")
+    Traceback (most recent call last):
+    TypeError: test must be an integer
+
 
 Testing with non-integer number:
     >>> bg = BaseGeometry()
