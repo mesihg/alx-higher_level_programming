@@ -1,0 +1,48 @@
+``7-base_geometry`` module
+=======================
+
+Using ``BaseGeometry class``
+=====================
+
+Import the class from the module:
+    >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+
+Testing docstring for the module:
+    >>> bgeo = __import__("7-base_geometry").__doc__
+    >>> len(bgeo) > 1
+    True
+
+Testing docstring for the class:
+    >>> bgeo = __import__("7-base_geometry").BaseGeometry.__doc__
+    >>> len(bgeo) > 1
+    True
+
+
+Testing with positive number:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("test", 30)
+    
+
+Testing with negative number:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("test", -5)
+    Traceback (most recent call last):
+    ValueError: test must be greater than 0
+
+Testing with float number:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("test", 2.5)
+    
+
+Testing with non-integer number:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("test", "a")
+    Traceback (most recent call last):
+    TypeError: test must be an integer
+
+Testing with no input:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
