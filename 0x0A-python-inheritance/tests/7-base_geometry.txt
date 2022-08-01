@@ -9,13 +9,13 @@ Import the class from the module:
 
 
 Testing docstring for the module:
-    >>> bgeo = __import__("7-base_geometry").__doc__
-    >>> len(bgeo) > 1
+    >>> bg = __import__("7-base_geometry").__doc__
+    >>> len(bg) > 1
     True
 
 Testing docstring for the class:
-    >>> bgeo = __import__("7-base_geometry").BaseGeometry.__doc__
-    >>> len(bgeo) > 1
+    >>> bg = __import__("7-base_geometry").BaseGeometry.__doc__
+    >>> len(bg) > 1
     True
 
 
