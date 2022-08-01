@@ -37,9 +37,22 @@ Testing with negative number:
     Traceback (most recent call last):
     ValueError: test must be greater than 0
 
+Testing with a value 0:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("test", 0)
+    Traceback (most recent call last):
+    ValueError: test must be greater than 0
+
 Testing with float number:
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("test", 2.5)
+    Traceback (most recent call last):
+    TypeError: test must be an integer
+
+
+Testing with boolean value:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("test", True)
     Traceback (most recent call last):
     TypeError: test must be an integer
     
