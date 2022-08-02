@@ -19,6 +19,8 @@ class Student:
             return self.__dict__
         new_dict = {}
         for attr in attrs:
-            new_dict[attr] = self.__dict__[attr]
-
+            try:
+                new_dict[attr] = self.__dict__[attr]
+            except KeyError:
+                pass
         return new_dict
