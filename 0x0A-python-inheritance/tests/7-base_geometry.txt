@@ -19,60 +19,94 @@ Testing docstring for the class:
     True
 
 
-Testing with positive number:
+Testing unimplemented method area:
     >>> bg = BaseGeometry()
     >>> bg.area()
     Traceback (most recent call last):
     Exception: area() is not implemented
 
+Testing method area with one input:
+    >>> bg = BaseGeometry()
+    >>> bg.area(3)
+    Traceback (most recent call last):
+    TypeError: area() takes 1 positional argument but 2 were given
+
+Testing method area with two input:
+    >>> bg = BaseGeometry()
+    >>> bg.area(3, 5)
+    Traceback (most recent call last):
+    TypeError: area() takes 1 positional argument but 3 were given
+
 
 Testing with positive number:
     >>> bg = BaseGeometry()
-    >>> bg.integer_validator("test", 30)
+    >>> bg.integer_validator("integer", 30)
     
 
 Testing with negative number:
     >>> bg = BaseGeometry()
-    >>> bg.integer_validator("test", -5)
+    >>> bg.integer_validator("number", -5)
     Traceback (most recent call last):
-    ValueError: test must be greater than 0
+    ValueError: number must be greater than 0
 
 Testing with a value 0:
     >>> bg = BaseGeometry()
-    >>> bg.integer_validator("test", 0)
+    >>> bg.integer_validator("number", 0)
     Traceback (most recent call last):
-    ValueError: test must be greater than 0
+    ValueError: number must be greater than 0
 
 Testing with float number:
     >>> bg = BaseGeometry()
-    >>> bg.integer_validator("test", 2.5)
+    >>> bg.integer_validator("float", 2.5)
     Traceback (most recent call last):
-    TypeError: test must be an integer
+    TypeError: float must be an integer
 
 
 Testing with boolean value:
     >>> bg = BaseGeometry()
-    >>> bg.integer_validator("test", True)
+    >>> bg.integer_validator("boolean", True)
     Traceback (most recent call last):
-    TypeError: test must be an integer
+    TypeError: boolean must be an integer
     
 
 Testing with non-integer number:
     >>> bg = BaseGeometry()
-    >>> bg.integer_validator("test", "4")
+    >>> bg.integer_validator("string", "4")
     Traceback (most recent call last):
-    TypeError: test must be an integer
+    TypeError: string must be an integer
 
 
 Testing with non-integer number:
     >>> bg = BaseGeometry()
-    >>> bg.integer_validator("test", "a")
+    >>> bg.integer_validator("tuple", (5,6))
     Traceback (most recent call last):
-    TypeError: test must be an integer
+    TypeError: tuple must be an integer
+
+
+Testing with non-integer number:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("list", [5,6])
+    Traceback (most recent call last):
+    TypeError: list must be an integer
+
+
+
+Testing with non-integer number:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("string", "a")
+    Traceback (most recent call last):
+    TypeError: string must be an integer
+
+
+Testing with None:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("none", None)
+    Traceback (most recent call last):
+    TypeError: none must be an integer
 
 Testing with one input:
     >>> bg = BaseGeometry()
-    >>> bg.integer_validator("test")
+    >>> bg.integer_validator("missing")
     Traceback (most recent call last):
     TypeError: integer_validator() missing 1 required positional argument: 'value'
 
