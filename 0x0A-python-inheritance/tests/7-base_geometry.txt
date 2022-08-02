@@ -69,26 +69,31 @@ Testing with boolean value:
     TypeError: boolean must be an integer
     
 
-Testing with non-integer number:
+Testing with string number:
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("string", "4")
     Traceback (most recent call last):
     TypeError: string must be an integer
 
 
-Testing with non-integer number:
+Testing with tuple:
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("tuple", (5,6))
     Traceback (most recent call last):
     TypeError: tuple must be an integer
 
 
-Testing with non-integer number:
+Testing with list:
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("list", [5,6])
     Traceback (most recent call last):
     TypeError: list must be an integer
 
+Testing with dict:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("dict", {5,6})
+    Traceback (most recent call last):
+    TypeError: dict must be an integer
 
 
 Testing with non-integer number:
