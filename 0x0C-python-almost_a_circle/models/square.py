@@ -25,7 +25,7 @@ class Square(Rectangle):
     def __str__(self):
         """returns string representation of the object"""
         return "[Square] ({}) {}/{} - {}".format(self.id,
-                                                 self.x, self.y, self.size)
+                                                 self.x, self.y, self.width)
 
     def update(self, *args, **kwargs):
         """Update each attributes of Square class"""
