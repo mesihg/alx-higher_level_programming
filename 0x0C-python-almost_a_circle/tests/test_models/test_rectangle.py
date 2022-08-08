@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-"""A test cases for base module."""
+"""A test cases for rectangle module."""
+
 
 import io
 import sys
