@@ -67,8 +67,8 @@ class Base:
         filename = cls.__name__ + ".json"
         instance_list = []
         try:
-            with open(filename, 'r', encoding="utf-8") as f:
-                object_list = cls.from_json_string(f.read)
+            with open(filename, 'r') as f:
+                object_list = Base.from_json_string(f.read)
                 for dcts in object_list:
                     instance_list.append(cls.create(**dcts))
                 return instance_list
