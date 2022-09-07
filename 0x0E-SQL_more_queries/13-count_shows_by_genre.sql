@@ -1,5 +1,6 @@
--- List all shows contained in hbtn_0d_tvshows without a genre linked
-SELECT A.name,
+-- List all shows contained in hbtn_0d_tvshows 
+-- and displays the number of shows linked to each
+SELECT A.name AS genre,
       COUNT(*) AS number_of_shows
 FROM tv_genres AS A
 LEFT JOIN tv_show_genres AS B
