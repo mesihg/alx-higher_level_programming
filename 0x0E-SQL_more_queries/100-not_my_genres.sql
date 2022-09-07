@@ -1,4 +1,4 @@
---  lists all shows, and all genres linked to that show, from the database hbtn_0d_tvshows
+--  list all genres not linked to the show Dexter
 SELECT A.name
 FROM tv_genres AS A
 WHERE A.id NOT IN (
