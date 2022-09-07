@@ -4,5 +4,5 @@ SELECT A.title,
 FROM tv_shows AS A
 LEFT JOIN tv_show_genres AS B
 ON A.id = B.show_id
-WHERE B.show_id IS NULLL
+WHERE B.genre_id IS NULLL
 ORDER BY A.title, B.genre_id;
