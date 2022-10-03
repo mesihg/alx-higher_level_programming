@@ -1,2 +1,4 @@
 #!/usr/bin/node
-['C is fun', 'Python is cool', 'JavaScript is amazing'].map(item => console.log(item));
+for (const item of ['C is fun', 'Python is cool', 'JavaScript is amazing']) {
+  console.log(item);
+}
