@@ -1,2 +1,2 @@
 #!/usr/bin/node
-module.exports = (a, b) => a + b;
+exports.add = (a, b) => a + b;
