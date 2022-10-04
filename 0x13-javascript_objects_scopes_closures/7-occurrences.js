@@ -6,5 +6,5 @@ exports.nbOccurences = function (list, searchElement) {
       numCount += 1;
     }
   }
- return numCount;
+  return numCount;
 };
