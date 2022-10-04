@@ -3,10 +3,10 @@ const Square1 = require('./5-square.js');
 
 module.exports = class Square extends Square1 {
   charPrint (c) {
-    if (typeof c !== 'undefined') {
-      for (let i = 0; i < this.size; i++) {
+    if (c !== 'undefined') {
+      for (let i = 0; i < this.height; i++) {
         let stringX = '';
-        for (let j = 0; j < this.size; j++) {
+        for (let j = 0; j < this.width; j++) {
           stringX += c;
         }
         console.log(stringX);
