@@ -13,6 +13,7 @@ if __name__ == "__main__":
             ORDER BY id ASC".format(sys.argv[4]))
     states = cur.fetchall()
     for state in states:
-        print(state)
+        if state[1] == sys.argv[4]:
+            print(state)
     cur.close()
     db.close()
