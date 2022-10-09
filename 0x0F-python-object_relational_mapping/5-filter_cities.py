@@ -13,7 +13,7 @@ if __name__ == "__main__":
                 cities INNER JOIN states ON states.id=cities.state_id
                 WHERE states.name=%s""", (sys.argv[4],))
     states = cur.fetchall()
-    for state in states:
-        print(state[0], sep=", ")
+    st = list(state[0] for state in states)
+    print(*st, sep=", ")
     cur.close()
     db.close()
