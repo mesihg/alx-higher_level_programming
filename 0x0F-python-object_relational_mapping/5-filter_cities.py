@@ -14,6 +14,6 @@ if __name__ == "__main__":
                 WHERE states.name=%s""", (sys.argv[4],))
     states = cur.fetchall()
     for state in states:
-        print(state)
+        print(state[0], sep=", ")
     cur.close()
     db.close()
