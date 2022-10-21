@@ -11,3 +11,5 @@ if __name__ == '__main__':
             print(body.decode('utf8'))
     except urlllib.error.HTTPError as err:
         print("Error code: {}".format(err.code))
+    except:
+        pass
