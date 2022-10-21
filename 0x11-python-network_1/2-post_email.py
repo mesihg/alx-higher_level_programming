@@ -4,9 +4,8 @@ import urllib.parse
 import urllib.request
 import sys
 
-data = {'email': sys.argv[2]}
-data = urllib.parse.urlenconde(data)
-data = data.encode('ascii')
+email_data = {'email': sys.argv[2]}
+data = urllib.parse.urlencode(email_data).encode('ascii')
 request = urllib.request.Request(sys.argv[1], data)
 with urllib.request.urlopen(request) as resp:
     print(resp.read().decode('utf8'))
