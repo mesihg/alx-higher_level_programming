@@ -8,5 +8,7 @@ if __name__ == '__main__':
     username = sys.argv[1]
     password = sys.argv[2]
 
-    resp = requests.get('https://api.github.com/user', auth=token)
+    auth_token = HTTPBasicAuth(username, password)
+
+    resp = requests.get('https://api.github.com/user', auth=auth_token)
     print(res.json().get('id'))
