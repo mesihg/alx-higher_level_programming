@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" "Make a request and display errors if any""" 
+""" "Make a request and display errors if any"""
 import requests
 import sys
 
